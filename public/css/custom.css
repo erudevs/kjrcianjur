@@ -10,10 +10,15 @@
 }
 
 .instagram,
-.youtube {
+.youtube,
+.facebook,
+.twitter {
   fill: white;
 }
-.instagram:hover,
-.youtube:hover {
+.instagram-hover:hover,
+.youtube-hover:hover {
   transform: scale(110%);
+}
+.fill-blue {
+  fill: #003363;
 }

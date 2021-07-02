@@ -1,0 +1,19 @@
+.date-published .line {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 50px;
+  top: -11.5px;
+  left: -35px;
+  background: #d4d4d8;
+  transform: rotate(90deg);
+}
+
+.instagram,
+.youtube {
+  fill: white;
+}
+.instagram:hover,
+.youtube:hover {
+  transform: scale(110%);
+}

@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+  @apply bg-white relative rounded-xl overflow-hidden shadow-sm p-5;
+}
+.article-thumbs {
+  @apply flex justify-end p-5 text-gray-300;
+}
+.article-details {
+  @apply grid w-full overflow-hidden justify-self-center;
+}
+.btn {
+  @apply rounded-md px-4 py-2;
+}
+.bg-overlay {
+  @apply w-full h-full bg-black bg-opacity-50 absolute top-0 left-0 hover:bg-opacity-0 transition duration-100 ease-out;
+}

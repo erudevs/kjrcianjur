@@ -15,48 +15,58 @@
   <title>Klub Jantung Remaja - Cianjur</title>
 </head>
 
-<body class="font-body bg-gray-200">
+<body class="font-body bg-gray-200 overflow-y-scroll">
   <!-- Header -->
   <header class="bg-primary-200 shadow-lg text-white top-0 fixed w-full z-10">
-    <nav class="container max-w-6xl mx-auto flex h-auto items-center py-4 px-3 justify-between">
-      <button class="sm:hidden order-2" id="burger">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+    <nav class="container max-w-6xl mx-auto flex h-auto items-center px-3 justify-between">
+      <button class="md:hidden order-2" id="burger">
+        <svg class="w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16m-7 6h7"></path>
         </svg>
       </button>
-      <a href="./index.html" class="flex items-center">
-        <div class="w-7">
+      <a href="./index.html" class="flex items-center py-4">
+        <div class="w-8">
           <img class="w-full object-cover object-center" src="./images/logo-kjr-circle.png" alt="Logo KJR">
         </div>
         <h1 class="ml-2">KJR Cianjur</h1>
       </a>
       <div
-        class="absolute uppercase hidden top-0 left-0 right-0 w-auto h-auto m-2 rounded-md bg-primary-100 sm:bg-transparent sm:capitalize sm:m-0 sm:p-0 sm:relative sm:flex"
+        class="absolute uppercase hidden top-0 left-0 right-0 w-auto m-2 rounded-md bg-primary-100 md:bg-transparent md:capitalize md:m-0 md:p-0 md:relative md:flex items-center transition duration-500 ease-in"
         id="menu">
-        <div class="border-b border-primary-200 flex justify-between items-center p-3 sm:hidden">
+        <div class="border-b border-primary-200 flex justify-between items-center p-3 md:hidden">
           <a href="./index.html">
-            <div class="w-7">
+            <div class="w-8">
               <img class="w-full object-cover object-center" src="./images/logo-kjr-circle.png" alt="Logo KJR">
             </div>
           </a>
           <div class="cursor-pointer" id="close">
-            <svg class="w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </div>
         </div>
-        <ul class="text-center sm:flex">
-          <li class="my-5 sm:my-0 cursor-pointer sm:pl-5 hover:underline">
-            <a href="./index.html">Home</a>
+        <ul
+          class="text-center md:text-left border-b border-primary-200 md:flex md:border-white md:border-r md:border-b-0">
+          <li class="my-5 px-4 md:my-0 cursor-pointer hover:underline">
+            <a class="block" href="./index.html">Home</a>
           </li>
-          <li class="my-5 sm:my-0 cursor-pointer sm:pl-5 font-bold hover:underline">
-            <a href="./about.html">About</a>
+          <li class="my-5 px-4 md:my-0 cursor-pointer font-bold hover:underline">
+            <a class="block" href="./about.html">About</a>
           </li>
-          <li class="my-5 sm:my-0 cursor-pointer sm:pl-5 hover:underline">
-            <a href="#">Program</a>
+          <li class="my-5 px-4 md:my-0 cursor-pointer hover:underline">
+            <a class="block" href="#">Program</a>
           </li>
-          <li class="my-5 sm:my-0 cursor-pointer sm:pl-5 hover:underline ">
-            <a href="#">Galeri</a>
+          <li class="my-5 px-4 cursor-pointer md:my-0 hover:underline">
+            <a class="block" href="#">Galeri</a>
+          </li>
+        </ul>
+        <ul class="text-center my-2 md:my-0 md:flex md:items-center md:ml-5">
+          <li class="my-3 px-4 md:my-0 md:mr-3 md:px-0 hover:underline">
+            <a class="block" href="#">Register</a>
+          </li>
+          <li class="my-3 px-4 md:my-0 md:px-0">
+            <a class="btn btn-md bg-red-700 block hover:bg-red-600 transition duration-100 ease-in md:inline-block md:btn-sm"
+              href="#">Login</a>
           </li>
         </ul>
       </div>
@@ -64,20 +74,18 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero relative mt-14 flex max-h-full overflow-hidden">
-    <div>
-      <video src="./videos/banner.mp4" autoplay loop class="block w-full object-cover object-right-bottom"></video>
-    </div>
+  <section class="hero relative mt-14 flex max-h-hero overflow-hidden">
+    <img class="w-full object-cover object-left-bottom" src="./images/foto-8_2.jpg" alt="Background Image KJR">
     <div
       class="absolute left-0 top-0 flex flex-col items-center justify-center min-h-full bg-blue-900 bg-opacity-50 text-white w-full">
-      <h2 class="text-3xl md:text-5xl font-bold">Tentang KJR</h2>
+      <h2 class="text-4xl font-bold">Tentang KJR?</h2>
     </div>
   </section>
 
   <!-- Main Content -->
   <main class="container max-w-6xl mx-auto p-3">
-    <div class="grid md:grid-cols-4 gap-5 text-secondary-100">
-      <div class="col-span-3 card">
+    <div class="grid md:grid-cols-3 gap-5 text-secondary-100">
+      <div class="md:col-span-2 card bg-white">
         <h2 class="text-sm mb-2 text-secondary-100">Sumber: <a href="https://inaheart.or.id/klub-jantung-remaja"
             target="_blank" class="text-primary-200">Situs
             Yayasan Jantung
@@ -117,7 +125,7 @@
           <li>8. <span>Sayangi</span> diri, keluarga dan Bangsa dengan membangun budaya berolahraga.</li>
         </ol>
 
-        <h4 class="text-xl font-bold text-secondary-200">Follow sosial media kita, yuk! :</h4>
+        <h4 class="text-xl font-bold text-secondary-200 mt-14">Follow sosial media kita, yuk! :</h4>
         <div>
           <div class="flex items-center">
             <div>
@@ -179,7 +187,81 @@
           </div>
         </div>
       </div>
-      <div class="card">Right Sidebar</div>
+      <div>
+        <div class="mb-3">
+          <h3 class="font-bold text-secondary-100">Our Articles</h3>
+          <div class="bg-gray-300 h-1 w-1/3"></div>
+        </div>
+        <div class="grid gap-4">
+          <article class="card relative bg-white">
+            <div class="article-thumbs">
+              <div class="date-published absolute top-0 left-6 mt-11 transform rotate-90 flex items-center origin-left">
+                <span class="font-bold uppercase text-lg">30 Juni 2021</span>
+                <span class="line"></span>
+              </div>
+              <div class="ml-3 rounded-tr-40px rounded-bl-20px overflow-hidden relative">
+                <a href="#">
+                  <img
+                    class="w-full h-full object-cover object-center transform scale-100 hover:scale-110 transition duration-100 ease-linear"
+                    src="./images/foto-1.jpg" alt="Image">
+                  <!-- <div class="hidden lg:block bg-overlay">
+                          </div> -->
+                </a>
+              </div>
+            </div>
+            <div class="article-details mt-auto">
+              <a href="#" class="justify-self-start">
+                <h2 class="uppercase font-extrabold text-secondary-200 hover:text-primary-200 text-xl sm:h-16">Manfaat
+                  Olahraga bagi
+                  Jantung</h2>
+              </a>
+              <div class="text-gray-500 font-light my-4 h-20 overflow-y-auto">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eum eligendi, maxime error, soluta
+                  quaerat
+                  facilis aliquam ullam tenetur cumque sequi. Molestiae fuga pariatur delectus vel! Sapiente illo
+                  quisquam
+                  nam, sint nulla repellendus? Iste, dolorem quibusdam velit porro aspernatur obcaecati repudiandae
+                  ratione,
+                  perferendis fugit ea reiciendis! Nisi facilis voluptates debitis.</p>
+              </div>
+              <a href="#"
+                class="btn btn-md block bg-secondary-200 text-white justify-self-end hover:bg-primary-200 transition duration-100 ease-in">
+                <button>Read more</button>
+              </a>
+            </div>
+          </article>
+          <article class="card relative bg-white">
+            <div class="article-thumbs">
+              <div class="date-published absolute top-0 left-6 mt-11 transform rotate-90 flex items-center origin-left">
+                <span class="font-bold uppercase text-lg">18 Mei 2021</span>
+                <span class="line"></span>
+              </div>
+              <div class="ml-3 rounded-tr-40px rounded-bl-20px overflow-hidden sm:h-64 relative">
+                <a href="#">
+                  <img
+                    class="w-full h-full object-cover object-center transform scale-100 hover:scale-110 transition duration-100 ease-linear"
+                    src="./images/foto-3.jpg" alt="Image">
+                  <!-- <div class="hidden lg:block bg-overlay"></div> -->
+                </a>
+              </div>
+            </div>
+            <div class="article-details">
+              <a href="#" class="justify-self-start">
+                <h2 class="uppercase font-extrabold text-secondary-200 hover:text-primary-200 text-xl sm:h-16">Senam
+                  kreasi: Sidekick by
+                  Dawin</h2>
+              </a>
+              <div class="text-gray-500 font-light my-4 h-20 overflow-y-auto">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, youtube!</p>
+              </div>
+              <a href="#"
+                class="btn btn-md block bg-secondary-200 text-white justify-self-end hover:bg-primary-200 transition duration-100 ease-in">
+                <button>Read more</button>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
     </div>
   </main>
   <footer class="bg-primary-200 mt-3 text-white">

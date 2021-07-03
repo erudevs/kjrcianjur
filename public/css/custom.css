@@ -22,3 +22,19 @@
 .fill-blue {
   fill: #003363;
 }
+#menu:before {
+  content: '';
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-8px, -8px);
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  #menu:before {
+    display: none;
+  }
+}

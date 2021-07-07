@@ -38,3 +38,12 @@
     display: none;
   }
 }
+
+/* Scroll Animation */
+.scroll-down nav {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up nav {
+  filter: drop-shadow(0 -10px 20px rgb(0, 0, 0));
+}

@@ -22,7 +22,16 @@
 .fill-blue {
   fill: #003363;
 }
-#menu:before {
+
+.card.card-wrapper {
+  padding: 0;
+}
+
+.user-details {
+  bottom: 0;
+}
+
+.menu:before {
   content: '';
   background: rgba(0, 0, 0, 0.3);
   position: absolute;
@@ -34,16 +43,22 @@
   z-index: -1;
 }
 @media (min-width: 768px) {
-  #menu:before {
+  .menu:before {
     display: none;
   }
-}
+  .card-wrapper img {
+    transition: all 300ms ease;
+  }
+  .user-details {
+    bottom: -100%;
+    transition: all 300ms ease;
+  }
 
-/* Scroll Animation */
-.scroll-down nav {
-  transform: translate3d(0, -100%, 0);
-}
+  .card-wrapper:hover img {
+    transform: scale(1.1) rotate(5deg);
+  }
 
-.scroll-up nav {
-  filter: drop-shadow(0 -10px 20px rgb(0, 0, 0));
+  .card-wrapper:hover .user-details {
+    bottom: 0;
+  }
 }

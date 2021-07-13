@@ -30,8 +30,9 @@
         </div>
         <h1 class="ml-2">KJR Cianjur</h1>
       </a>
+      <div class="overlay"></div>
       <div
-        class="absolute uppercase hidden top-0 left-0 right-0 m-2 rounded-md bg-primary-100 md:bg-transparent md:capitalize md:m-0 md:p-0 md:relative md:flex items-center z-20"
+        class="absolute uppercase left-0 right-0 m-2 rounded-md bg-primary-100 md:bg-transparent md:capitalize md:m-0 md:p-0 md:relative md:flex items-center z-20"
         id="menu">
         <div class="border-b border-primary-200 flex justify-between items-center p-3 md:hidden">
           <a href="../index.html">
@@ -75,14 +76,72 @@
 
   <!-- Main Content -->
   <main class="container max-w-6xl mx-auto p-3 mt-16">
-    <div class="text-center mt-20">
-      <h3 class="font-bold">
-        Halaman masih dalam tahap perkembangan...
-      </h3>
-      <a href="./index.html" class="btn bg-primary-200 text-white inline-block">Kembali</a>
+    <div class="top flex items-center my-5">
+      <div class="w-12 h-12 rounded-full overflow-hidden">
+        <img src="../images/users/foto-1.jpg" alt="Profile Picture" class="w-full">
+      </div>
+      <div class="profile-name ml-3 text-secondary-200">
+        <h3 class="font-bold text-xl">Ipan Haryana</h3>
+        <p class="text-sm font-light">Akun Pribadi</p>
+      </div>
+    </div>
+    <div class="flex flex-col lg:flex-row">
+      <div class="left w-full order-2 lg:order-1">
+        <form action="#">
+          <div>
+            <label class="block text-secondary-200 font-bold" for="username">Username</label>
+            <input
+              class="bg-primary-200 focus:outline-none focus:border-primary-100 border-2 rounded-md py-1 px-2 mt-1 my-2 text-white w-full"
+              type="text" value="ipanharyana" id="username">
+          </div>
+          <div>
+            <label class="block text-secondary-200 font-bold" for="email">Alamat Email</label>
+            <input
+              class="bg-primary-200 focus:outline-none focus:border-primary-100 border-2 rounded-md py-1 px-2 mt-1 my-2 text-white w-full"
+              type="email" value="kabut@gmail.com" id="email">
+          </div>
+          <div>
+            <label class="block text-sm font-bold mb-1">Kutipan Favorit</label>
+            <textarea name="message" rows="5"
+              class="resize-none bg-primary-200 focus:outline-none focus:border-primary-100 border-2 rounded-md py-1 px-2 mt-1 my-2 text-white w-full"
+              placeholder="Silakan tulis disini...">Maafkan, lupakan, jalan terus</textarea>
+          </div>
+          <div>
+            <label class="block text-secondary-200 font-bold" for="fb">Facebook Username</label>
+            <input
+              class="bg-primary-200 focus:outline-none focus:border-primary-100 border-2 rounded-md py-1 px-2 mt-1 my-2 text-white w-full"
+              type="text" value="Ipan Haryana" id="fb">
+          </div>
+          <div>
+            <label class="block text-secondary-200 font-bold" for="ig">Instagram Username</label>
+            <input
+              class="bg-primary-200 focus:outline-none focus:border-primary-100 border-2 rounded-md py-1 px-2 mt-1 my-2 text-white w-full"
+              type="text" value="haryana_ifan" id="ig">
+          </div>
+          <button class="btn bg-primary-100 text-white hover:bg-primary-200 my-3 w-full lg:w-auto">Simpan
+            Perubahan</button>
+        </form>
+      </div>
+      <div class="right w-full ml-0 order-1 lg:order-2 lg:ml-10">
+        <h2 class="mb-2 text-secondary-200 font-bold">Profile Picture</h2>
+        <div class="image-wrapper relative">
+          <div class="w-52 h-52 rounded-full overflow-hidden border-primary-100 border-4">
+            <img class="w-full object-cover" src="../images/users/foto-1.jpg" alt="Profile Picture">
+          </div>
+          <a href="#"
+            class="edit-btn flex items-center bg-primary-200 hover:bg-primary-100 text-white p-2 rounded absolute bottom-1 left-0">
+            <svg class="w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z">
+              </path>
+            </svg>
+            <h4 class="text-xs ml-1">Change</h4>
+          </a>
+        </div>
+      </div>
     </div>
   </main>
-  <footer class="absolute bottom-0 left-0 w-full bg-primary-200 mt-3 text-white">
+  <footer class="bg-primary-200 mt-3 text-white">
     <div class="max-w-6xl mx-auto grid sm:grid-cols-3 items-center py-4 px-3">
       <div class="flex items-center col-span-2 sm:justify-self-start">
         <div class="w-32">

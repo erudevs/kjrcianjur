@@ -40,6 +40,16 @@
   transition: all 200ms ease;
 }
 
+#dropdownMenu {
+  top: 44px;
+  display: none;
+  transition: all 200ms ease-out;
+}
+#dropdownMenu.show {
+  display: block;
+  transition: all 200ms ease-in;
+}
+
 .overlay {
   background: rgba(0, 0, 0, 0.3);
   position: absolute;

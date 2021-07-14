@@ -6,6 +6,8 @@ const overlay = document.querySelector('.overlay');
 const dropBtn = document.querySelector('.dropbtn');
 const dropdown = document.querySelector('.dropdown');
 const chevron = document.querySelector('.chevron');
+// let tabContent = document.querySelector('.tabcontent');
+// let tabLink = document.querySelector('.tablink');
 const body = document.body;
 
 burger.addEventListener('click', () => {
@@ -19,9 +21,29 @@ close.addEventListener('click', () => {
   if (menu.classList.contains('show')) {
     menu.classList.remove('show');
     overlay.style.left = '-100vw';
+    dropdownMenu.classList.remove('show');
   }
 });
 
 dropBtn.addEventListener('click', () => {
   dropdownMenu.classList.toggle('show');
 });
+
+const openArticle = (e, articleName) => {
+  let i, tabContent, tabLink, tabHeader;
+
+  tabContent = document.getElementsByClassName('tabcontent');
+  for (i = 0; i < tabContent.length; i++) {
+    tabContent[i].style.display = 'none';
+  }
+
+  tabLink = document.getElementsByClassName('tablink');
+  for (i = 0; i < tabLink.length; i++) {
+    tabLink[i].className = tabLink[i].className.replace(' active', '');
+  }
+  document.getElementById(articleName).style.display = 'grid';
+  e.currentTarget.className += ' active';
+};
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById('defaultOpen').click();

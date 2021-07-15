@@ -43,29 +43,30 @@
 #dropdownMenu {
   top: 44px;
   display: none;
-  transition: all 200ms ease-out;
 }
 #dropdownMenu.show {
   display: block;
-  transition: all 200ms ease-in;
+  animation: fadeIn 0.3s;
 }
 
 .overlay {
   background: rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 0;
-  left: -100vw;
+  left: 0;
+  display: none;
   /* transform: translate(-8px, 0); */
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  transition: all 200ms ease;
+  /* transition: all 200ms ease; */
+  animation: fadeIn 0.3s;
 }
 
 .tabs button {
   background-color: inherit;
-  /* outline: none;
-  border: none; */
+  outline: none;
+  border: none;
   padding: 14px 16px;
   float: left;
   transition: 300ms;
@@ -81,7 +82,7 @@
 }
 .tabcontent {
   display: none;
-  animation: fadeEffects 0.5s;
+  animation: fadeIn 0.5s;
 }
 
 .article-table .card {
@@ -113,11 +114,20 @@
 }
 
 /* Animation */
-@keyframes fadeEffects {
+@keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }

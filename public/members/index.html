@@ -94,6 +94,10 @@
         Profil</a>
     </div>
 
+    <a href="../articles/create.html"
+      class="p-2 rounded mt-5 block md:inline-block bg-primary-200 text-center text-white hover:bg-primary-100 text-sm md:text-base">Tambah
+      Artikel</a>
+
     <div class="tabs mt-5 bg-gray-300 rounded overflow-hidden border border-gray-400 flex">
       <button class="tablink active" onclick="openArticle(event, 'approve')" id="defaultOpen">Disetujui</button>
       <button class="tablink" onclick="openArticle(event, 'pending')">Pending</button>
@@ -373,6 +377,10 @@
   </footer>
 
   <script src="../script/script.js"></script>
+  <script>
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById('defaultOpen').click();
+  </script>
 </body>
 
 </html>

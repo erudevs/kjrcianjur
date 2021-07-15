@@ -12,10 +12,6 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../css/custom.css">
 
-  <!-- WYSIWYG TinyMCE Editor -->
-  <script src="https://cdn.tiny.cloud/1/9az8sfhk9hzxms7c2vxsqac3whzit0oeor24ctgx2t76rgkm/tinymce/5/tinymce.min.js"
-    referrerpolicy="origin"></script>
-
   <title>Klub Jantung Remaja - Cianjur</title>
 </head>
 
@@ -59,7 +55,7 @@
             <a class="block" href="../about.html">Tentang Kami</a>
           </li>
           <li class="my-5 px-4 md:my-0 cursor-pointer hover:underline">
-            <a class="block" href="../member.html">Anggota</a>
+            <a class="block" href="./index.html">Anggota</a>
           </li>
           <li class="my-5 px-4 cursor-pointer md:my-0 hover:underline">
             <a class="block" href="../contact.html">Hubungi Kami</a>
@@ -77,8 +73,8 @@
             </div>
           </button>
           <div id="dropdownMenu" class="dropdown-content md:absolute md:bg-primary-200 right-0 rounded">
-            <a class="md:py-1 md:pl-2 md:pr-10 block my-2 md:my-0 lg:hover:bg-secondary-200 transition duration-100 ease-linear"
-              href="../members/index.html">Profil</a>
+            <a class="md:py-1 md:pl-2 md:pr-10 block my-2 md:my-0 lg:hover:bg-secondary-200 transition duration-100 ease-linear font-bold"
+              href="./index.html">Profil</a>
             <a class="md:py-1 md:pl-2 md:pr-10 block my-2 md:my-0 lg:hover:bg-secondary-200 transition duration-100 ease-linear"
               href="../login.html">Logout</a>
           </div>
@@ -88,48 +84,11 @@
   </header>
 
   <!-- Main Content -->
-  <main class="container max-w-6xl mx-auto p-3 mt-16 text-secondary-200">
-    <h1 class="font-bold text-xl my-5">Edit Artikel</h1>
-    <div class="image-placeholder w-full h-full md:h-80 bg-white relative overflow-hidden">
-      <img src="../images/foto-4.jpg" alt="Cover" class="w-full object-cover object-center md:absolute md:-mt-40">
-      <div class="bg-overlay bg-black bg-opacity-50 absolute w-full h-full"></div>
-      <div class="addPhoto absolute bottom-2 left-2">
-        <a href="#" class="inline-block bg-primary-200 text-white p-2 hover:bg-primary-100">Ubah Foto Cover</a>
-      </div>
-    </div>
-    <div class="max-w-3xl mx-auto bg-white mt-5 p-5">
-      <form>
-        <div>
-          <label class="block text-secondary-200 font-bold" for="title">Judul Artikel</label>
-          <input
-            class="focus:outline-none focus:border-primary-100 border-2 rounded-md py-1 px-2 mt-1 my-2 text-secondary-200 w-full"
-            type="text" value="Acara Pelantikan KJS Dan KJR Di Bandung" id="title">
-        </div>
-        <div>
-          <label class="block text-secondary-200 font-bold" for="email">Slug <span class="text-sm font-light">(Otomatis
-              terisi)</span></label>
-          <input
-            class="focus:outline-none focus:border-primary-100 border-2 rounded-md py-1 px-2 mt-1 my-2 text-secondary-200 w-full font-light"
-            type="text" value="acara-pelantikan-kjs-dan-kjr-di-bandung" id="text" disabled>
-        </div>
-        <div>
-          <label for="textArticle" class="block font-bold mb-1">Konten Artikel</label>
-          <textarea id="textArticle" name="message" rows="5"
-            class="resize-none focus:outline-none focus:border-primary-100 border-2 rounded-md py-1 px-2 mt-1 my-2 text-secondary-200 w-full"
-            placeholder="Kita adalah masa depan...">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eligendi repudiandae soluta nemo voluptate eveniet
-            amet? Quod alias adipisci inventore facere veritatis repudiandae beatae nemo error iste eos quas maxime soluta accusamus
-            optio qui, ipsa fuga eum vero. Iure, unde natus. Blanditiis harum delectus facere a odit natus eos praesentium eum
-            tempore nobis voluptatum quam eius minus id maxime exercitationem possimus labore, officia non! Molestiae fugiat
-            nesciunt veniam, assumenda necessitatibus itaque magnam saepe sapiente pariatur, nulla, obcaecati a totam laboriosam est
-            quibusdam quod voluptatem earum! Debitis facilis omnis tempora expedita illum. Rerum inventore consectetur, facere
-            possimus doloribus aspernatur nihil deleniti.</textarea>
-        </div>
-        <button class="btn bg-primary-200 text-white hover:bg-primary-100 mt-5 w-full lg:w-auto">Update Artikel</button>
-      </form>
-    </div>
+  <main class="container max-w-6xl mx-auto p-3 mt-16 text-secondary-200 text-center">
+    <h1 class="font-bold mt-16">Halaman masih dalam tahap perkembangan...</h1>
+    <a href="../members/index.html" class="btn inline-block bg-primary-200 text-white">Kembali</a>
   </main>
-
-  <footer class="bg-primary-200 text-white">
+  <footer class="bg-primary-200 mt-80 text-white">
     <div class="max-w-6xl mx-auto grid sm:grid-cols-3 items-center py-4 px-3">
       <div class="flex items-center col-span-2 sm:justify-self-start">
         <div class="w-32">
@@ -173,14 +132,6 @@
   </footer>
 
   <script src="../script/script.js"></script>
-  <script>
-    tinymce.init({
-      selector: 'textarea',
-      plugin: 'a_tinymce_plugin',
-      a_plugin_option: true,
-      a_configuration_option: 400
-    });
-  </script>
 </body>
 
 </html>

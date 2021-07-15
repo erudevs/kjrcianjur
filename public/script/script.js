@@ -13,14 +13,14 @@ const body = document.body;
 burger.addEventListener('click', () => {
   if (!menu.classList.contains('show')) {
     menu.classList.add('show');
-    overlay.style.left = '0';
+    overlay.style.display = 'block';
   }
 });
 
 close.addEventListener('click', () => {
   if (menu.classList.contains('show')) {
     menu.classList.remove('show');
-    overlay.style.left = '-100vw';
+    overlay.style.display = 'none';
     dropdownMenu.classList.remove('show');
   }
 });
@@ -44,6 +44,3 @@ const openArticle = (e, articleName) => {
   document.getElementById(articleName).style.display = 'grid';
   e.currentTarget.className += ' active';
 };
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById('defaultOpen').click();

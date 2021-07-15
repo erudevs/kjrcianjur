@@ -33096,30 +33096,9 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.bg-overlay {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-  --tw-bg-opacity: 1;
-  background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.5;
-}
-
-.bg-overlay:hover {
-  --tw-bg-opacity: 0;
-}
-
-.bg-overlay {
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  transition-duration: 100ms;
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
+/* .bg-overlay {
+  @apply w-full h-full bg-black bg-opacity-50 absolute top-0 left-0 hover:bg-opacity-0 transition duration-100 ease-out;
+} */
 
 @media (min-width: 640px) {
   .sm\:container {

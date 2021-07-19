@@ -8,19 +8,18 @@ const dropBtn = document.querySelector('.dropbtn');
 const dropdown = document.querySelector('.dropdown');
 const chevron = document.querySelector('.chevron');
 const navLink = document.querySelectorAll('.nav-link');
-const modal = document.getElementById('modal');
-const loginModal = document.getElementById('loginModal');
+const modal = document.querySelector('.modal');
+const btnModal = document.getElementById('btnModal');
 const registerModal = document.getElementById('registerModal');
+
 if (modal) {
-  if (loginModal) {
-    const closeModal = document.querySelector('.closeModal');
-    loginModal.onclick = function () {
-      modal.classList.add('show');
-    };
-    closeModal.onclick = function () {
-      modal.classList.remove('show');
-    };
-  }
+  const closeModal = document.querySelector('.closeModal');
+  btnModal.onclick = function () {
+    modal.classList.add('show');
+  };
+  closeModal.onclick = function () {
+    modal.classList.remove('show');
+  };
 
   window.onclick = function (e) {
     if (e.target == modal) {
@@ -79,3 +78,25 @@ const openArticle = (e, articleName) => {
   document.getElementById(articleName).style.display = 'grid';
   e.currentTarget.className += ' active';
 };
+
+function openForm(e, formName) {
+  // Declare all variable
+  let i, formContent, modalBtn;
+
+  // Get all elements with class="form" and hide by default
+  formContent = document.getElementsByClassName('form');
+  for (i = 0; i < formContent.length; i++) {
+    formContent[i].style.display = 'none';
+  }
+
+  // Get all elements with class="modal-btn" and remove the class "active"
+  modalBtn = document.getElementsByClassName('modal-btn');
+  for (i = 0; i < modalBtn.length; i++) {
+    modalBtn[i].className = modalBtn[i].className.replace(' active', '');
+  }
+
+  // Show the current tab, and add an "active" class to the button that open the tab
+  document.getElementById(formName).style.display = 'block';
+  e.currentTarget.className += ' active';
+}
+document.getElementById('defaultOpen').click();

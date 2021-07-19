@@ -38,7 +38,7 @@
       <div
         class="absolute uppercase left-0 right-0 m-2 rounded-md bg-primary-100 md:bg-transparent md:capitalize md:m-0 md:p-0 md:relative md:flex items-center z-20"
         id="menu">
-        <div class="border-b border-primary-200 flex justify-between items-center p-3 md:hidden">
+        <div class="flex justify-between items-center p-3 md:hidden">
           <a href="../index.html">
             <div class="w-8">
               <img class="w-full object-cover object-center" src="../images/logo-kjr-circle.png" alt="Logo KJR">
@@ -50,7 +50,7 @@
             </svg>
           </div>
         </div>
-        <ul class="nav-menu text-center border-b border-primary-200 md:flex">
+        <ul class="nav-menu text-center md:flex">
           <li class="nav-item">
             <a class="block nav-link" href="../index.html">Beranda</a>
           </li>
@@ -110,27 +110,28 @@
       </div>
 
       <div class="max-w-3xl mx-auto">
-        <div class="rounded-md bg-white mt-5 p-10">
-          <div>
+        <div class="rounded-md bg-white mt-5 p-5">
+          <div class="mt-3">
             <label class="block text-secondary-200 font-bold" for="title">Judul Artikel</label>
             <input
-              class="focus:outline-none focus:border-primary-100 border-2 rounded-md py-1 px-2 mt-1 my-2 text-secondary-200 w-full"
+              class="focus:outline-none focus:border-primary-100 border-2 rounded-md py-1 px-2 text-secondary-200 w-full"
               type="text" placeholder="KJR: We Are The Future" id="title">
           </div>
-          <div>
+          <div class="mt-3">
             <label class="block text-secondary-200 font-bold">Slug <span class="text-sm font-light">(Otomatis
                 terisi)</span></label>
             <input
-              class="focus:outline-none focus:border-primary-100 border-2 rounded-md py-1 px-2 mt-1 my-2 text-secondary-200 w-full font-light"
+              class="focus:outline-none focus:border-primary-100 border-2 rounded-md py-1 px-2 text-secondary-200 w-full font-light"
               type="text" placeholder="kjr-we-are-the-future" disabled>
           </div>
-          <div>
+          <div class="mt-3">
             <label for="textArticle" class="block font-bold mb-1">Konten Artikel</label>
             <textarea id="textArticle" name="message" rows="10"
-              class="resize-none focus:outline-none focus:border-primary-100 border-2 rounded-md py-1 px-2 mt-1 my-2 text-secondary-200 w-full"
+              class="resize-none focus:outline-none focus:border-primary-100 border-2 rounded-md py-1 px-2 text-secondary-200 w-full"
               placeholder="Kita adalah masa depan..."></textarea>
           </div>
-          <button class="btn bg-primary-200 text-white hover:bg-primary-100 w-full lg:w-auto">Tambah Artikel</button>
+          <button class="btn mt-5 bg-primary-200 text-white hover:bg-primary-100 w-full lg:w-auto">Tambah
+            Artikel</button>
         </div>
       </div>
     </form>

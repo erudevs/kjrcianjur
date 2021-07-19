@@ -32,9 +32,9 @@
       </a>
       <div class="overlay"></div>
       <div
-        class="absolute uppercase left-0 right-0 m-2 rounded-md bg-primary-100 md:bg-transparent md:capitalize md:m-0 md:p-0 md:relative md:flex items-center z-20"
+        class="absolute uppercase left-0 right-0 m-2 rounded-md md:bg-transparent md:capitalize md:m-0 md:p-0 md:relative md:flex items-center z-20"
         id="menu">
-        <div class="border-b border-primary-200 flex justify-between items-center p-3 md:hidden">
+        <div class="flex justify-between items-center p-3 md:hidden">
           <a href="./index.html">
             <div class="w-8">
               <img class="w-full object-cover object-center" src="./images/logo-kjr-circle.png" alt="Logo KJR">
@@ -46,7 +46,7 @@
             </svg>
           </div>
         </div>
-        <ul class="nav-menu text-center border-b border-primary-200 md:flex">
+        <ul class="nav-menu text-center md:flex">
           <li class="nav-item active">
             <a class="block nav-link" href="./index.html">Beranda</a>
           </li>
@@ -62,7 +62,7 @@
         </ul>
         <ul class="nav-subMenu text-center my-2 md:my-0 md:flex md:items-center">
           <li class="nav-item nav-login">
-            <a class="block nav-link" href="#modalLogin" id="loginModal">Masuk/Daftar</a>
+            <a class="block nav-link" href="#" id="btnModal">Masuk/Daftar</a>
           </li>
           <!-- <li class="nav-item nav-register">
             <a class="block nav-link" href="#modalRegister" id="registerModal">Daftar</a>
@@ -330,36 +330,74 @@
     </div>
   </footer>
 
-  <div class="p-5 flex items-center justify-center" id="modal">
-    <span class="closeModal text-4xl">&times;</span>
-    <div id="modalLogin"
-      class="bg-white max-w-2xl mx-auto p-5 w-full flex flex-col items-center justify-center relative">
-      <div class="modal-header w-full mb-5 -mt-3 flex justify-between items-center">
-        <h2 class="font-bold text-xl">Login</h2>
+  <div class="modal p-5">
+    <div class="modal-content bg-white max-w-2xl justify-self-center">
+      <div class="modal-header flex items-center justify-between bg-gray-500">
+        <div class="modal-btn__container flex">
+          <button class="modal-btn p-3" onclick="openForm(event, 'login')" id="defaultOpen">Masuk</button>
+          <button class="modal-btn p-3" onclick="openForm(event, 'register')">Daftar</button>
+        </div>
+        <div class="modal-close closeModal p-3">
+          <svg class="w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </div>
       </div>
-      <div class="max-w-xl mx-auto w-full">
-        <form action="./index2.html">
-          <div>
-            <label class="block text-gray-600">Alamat Email</label>
-            <input autofocus class="focus:outline-none focus:border-primary-200 border-b-2 w-full p-2 mt-1 my-2"
-              type="text" placeholder="eruDev@example.com">
-          </div>
-          <div>
-            <label class="block text-gray-600">Kata Sandi</label>
-            <input class="focus:outline-none focus:border-primary-200 border-b-2 w-full p-2 mt-1 my-2" type="password"
-              placeholder="********">
-          </div>
-          <div class="text-center">
-            <button
-              class="border p-2 mt-1 my-2 rounded-md bg-primary-100 hover:bg-primary-200 text-white">Masuk</button>
-          </div>
-          <a href="#" class="mb-5 inline-block">
-            <p>Lupa kata sandi?</p>
-          </a>
-        </form>
+      <div class="modal-body p-5">
+        <div class="w-full">
+          <form action="./index2.html" class="form form-login" id="login">
+            <div>
+              <label class="block text-gray-600">Alamat Email</label>
+              <input autofocus class="focus:outline-none focus:border-primary-200 border-b-2 w-full p-2 mt-1 my-2"
+                type="text" placeholder="eruDev@example.com">
+            </div>
+            <div>
+              <label class="block text-gray-600">Kata Sandi</label>
+              <input class="focus:outline-none focus:border-primary-200 border-b-2 w-full p-2 mt-1 my-2" type="password"
+                placeholder="********">
+            </div>
+            <div class="text-center">
+              <button
+                class="border p-2 mt-1 my-2 rounded-md bg-primary-100 hover:bg-primary-200 text-white">Masuk</button>
+            </div>
+            <a href="#" class="mb-5 inline-block">
+              <p>Lupa kata sandi?</p>
+            </a>
+          </form>
+          <form action="./index2.html" class="form form-register" id="register">
+            <div>
+              <label class="block text-gray-600">Nama Lengkap</label>
+              <input autofocus class="focus:outline-none focus:border-primary-200 border-b-2 w-full p-2 mt-1 my-2"
+                type="text" placeholder="Eru Dev">
+            </div>
+            <div>
+              <label class="block text-gray-600">Alamat Email</label>
+              <input class="focus:outline-none focus:border-primary-200 border-b-2 w-full p-2 mt-1 my-2" type="email"
+                placeholder="eruDev@example.com">
+            </div>
+            <div>
+              <label class="block text-gray-600">No. Handphone</label>
+              <input class="focus:outline-none focus:border-primary-200 border-b-2 w-full p-2 mt-1 my-2" type="number"
+                placeholder="082112341234">
+            </div>
+            <div>
+              <label class="block text-gray-600">Kata Sandi</label>
+              <input class="focus:outline-none focus:border-primary-200 border-b-2 w-full p-2 mt-1 my-2" type="password"
+                placeholder="********">
+            </div>
+            <div>
+              <label class="block text-gray-600">Konfirmasi Kata Sandi</label>
+              <input class="focus:outline-none focus:border-primary-200 border-b-2 w-full p-2 mt-1 my-2" type="password"
+                placeholder="********">
+            </div>
+            <div>
+              <button
+                class="border w-full p-2 mt-1 my-2 rounded-md bg-primary-100 hover:bg-primary-200 text-white">Daftar</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-
   </div>
 
   <script src="./script/script.js"></script>

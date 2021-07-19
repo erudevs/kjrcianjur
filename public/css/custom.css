@@ -22,6 +22,13 @@ header {
   display: flex;
   align-items: center;
 }
+#menu {
+  background: #003363;
+}
+.nav-menu {
+  border-top: 1px solid #00509b;
+  border-bottom: 1px solid #00509b;
+}
 .nav-item {
   display: flex;
   align-items: center;
@@ -51,6 +58,7 @@ header {
   border-radius: 4px;
   background: #b91c1c;
   transition: 300ms;
+  border: 1px solid #fff;
 }
 
 .instagram,
@@ -137,7 +145,7 @@ header {
   padding: 0;
 }
 
-#modal {
+.modal {
   display: none;
   position: fixed;
   overflow: hidden;
@@ -147,28 +155,35 @@ header {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-color: #fff;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 50;
   animation: fadeIn 300ms;
 }
-#modal .closeModal {
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 20px;
+.modal .modal-content {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal .modal-body form {
+  display: none;
+  animation: fadeIn 300ms;
+}
+.modal .modal-btn.active {
+  background: #003363;
   color: #fff;
 }
-#modal.show {
-  display: flex;
+.modal .modal-btn:hover {
+  background: #00509b;
+  transition: 300ms;
 }
-#modal #modalLogin,
-#modal #modalRegister {
-  display: none;
+.modal .closeModal {
+  cursor: pointer;
+  color: #262626;
 }
-#modal.show #modalLogin,
-#modal.show #modalRegister {
+.modal.show {
   display: block;
+  animation: fadeIn 300ms;
 }
 
 @media (min-width: 768px) {
@@ -180,12 +195,15 @@ header {
   }
   .nav-menu {
     border-right: 1px solid #fff;
+    border-top: none;
+    border-bottom: none;
   }
   .nav-subMenu {
     margin-left: 5px;
   }
   #menu {
     top: 0;
+    background: transparent;
   }
   #dropdownMenu > a:hover {
     background: #801111;

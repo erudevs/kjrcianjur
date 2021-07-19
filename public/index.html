@@ -15,18 +15,18 @@
   <title>Klub Jantung Remaja - Cianjur</title>
 </head>
 
-<body class="font-body bg-gray-200">
+<body class="font-body bg-gray-200 relative">
   <!-- Header -->
   <header class="bg-primary-200 shadow-lg text-white text-sm lg:text-base top-0 fixed w-full z-10">
-    <nav class="container max-w-6xl mx-auto flex h-auto items-center px-3 justify-between">
+    <nav class="px-3 md:px-0 container max-w-6xl mx-auto flex items-center justify-between">
       <button class="md:hidden order-2" id="burger">
         <svg class="w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16m-7 6h7"></path>
         </svg>
       </button>
-      <a href="./index.html" class="flex items-center py-4">
+      <a href="./index.html" class="flex items-center">
         <div class="w-8">
-          <img class="w-full object-cover object-center" src="./images/logo-kjr-circle.png" alt="Logo KJR">
+          <img class="logo w-full object-cover object-center" src="./images/logo-kjr-circle.png" alt="Logo KJR">
         </div>
         <h1 class="ml-2">KJR Cianjur</h1>
       </a>
@@ -46,54 +46,34 @@
             </svg>
           </div>
         </div>
-        <ul
-          class="text-center md:text-left border-b border-primary-200 md:flex md:border-white md:border-r md:border-b-0">
-          <li class="my-5 px-4 md:my-0 cursor-pointer font-bold hover:underline">
-            <a class="block" href="./index.html">Beranda</a>
+        <ul class="nav-menu text-center border-b border-primary-200 md:flex">
+          <li class="nav-item active">
+            <a class="block nav-link" href="./index.html">Beranda</a>
           </li>
-          <li class="my-5 px-4 md:my-0 cursor-pointer hover:underline">
-            <a class="block" href="./about.html">Tentang Kami</a>
+          <li class="nav-item">
+            <a class="block nav-link" href="./about.html">Tentang KJR</a>
           </li>
-          <li class="my-5 px-4 md:my-0 cursor-pointer hover:underline">
-            <a class="block" href="./member.html">Anggota</a>
+          <li class="nav-item">
+            <a class="block nav-link" href="./member.html">Anggota</a>
           </li>
-          <li class="my-5 px-4 cursor-pointer md:my-0 hover:underline">
-            <a class="block" href="./contact.html">Hubungi Kami</a>
+          <li class="nav-item">
+            <a class="block nav-link" href="./contact.html">Kontak</a>
           </li>
         </ul>
-        <!-- <ul class="text-center my-2 md:my-0 md:flex md:items-center md:ml-5">
-          <li class="my-3 px-4 md:my-0 md:mr-3 md:px-0 hover:underline">
-            <a class="block" href="./register.html">Daftar</a>
+        <ul class="nav-subMenu text-center my-2 md:my-0 md:flex md:items-center">
+          <li class="nav-item nav-login">
+            <a class="block nav-link" href="#modalLogin" id="loginModal">Masuk/Daftar</a>
           </li>
-          <li class="my-3 px-4 md:my-0 md:px-0">
-            <a class="btn btn-md bg-red-700 block hover:bg-red-600 transition duration-100 ease-in md:inline-block md:btn-sm"
-              href="./login.html">Masuk</a>
-          </li>
-        </ul> -->
-        <div class="p-3 lg:p-0 md:ml-5 dropdown relative">
-          <button class="flex items-center dropbtn">
-            <div class="w-7 h-7 rounded-full overflow-hidden">
-              <img src="./images//users/foto-1.jpg" alt="profil" class="w-full object-cover">
-            </div>
-            <div class="ml-1 chevron">
-              <svg class="w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </div>
-          </button>
-          <div id="dropdownMenu" class="dropdown-content md:absolute md:bg-primary-200 right-0 rounded">
-            <a class="md:py-1 md:pl-2 md:pr-10 block my-2 md:my-0 lg:hover:bg-secondary-200 transition duration-100 ease-linear"
-              href="./members/index.html">Profil</a>
-            <a class="md:py-1 md:pl-2 md:pr-10 block my-2 md:my-0 lg:hover:bg-secondary-200 transition duration-100 ease-linear"
-              href="./login.html">Logout</a>
-          </div>
-        </div>
+          <!-- <li class="nav-item nav-register">
+            <a class="block nav-link" href="#modalRegister" id="registerModal">Daftar</a>
+          </li> -->
+        </ul>
       </div>
     </nav>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero relative mt-14 flex max-h-hero overflow-hidden">
+  <section class="hero relative flex max-h-hero mt-14 overflow-hidden">
     <img class="w-full object-cover object-center" src="./images/bg-image.JPG" alt="Background Image KJR">
     <div
       class="absolute left-0 top-0 flex flex-col items-center justify-center min-h-full bg-blue-900 bg-opacity-50 text-white w-full">
@@ -130,7 +110,7 @@
           </div>
           <div class="article-details mt-auto">
             <a href="./article.html" class="justify-self-start">
-              <h2 class="uppercase font-extrabold text-secondary-200 hover:text-primary-200 text-xl sm:h-16">Manfaat
+              <h2 class="uppercase font-extrabold text-secondary-200 text-xl sm:h-16">Manfaat
                 Olahraga bagi
                 Jantung</h2>
             </a>
@@ -142,7 +122,7 @@
                 sehingga tekanan darah tetap terkendali.</p>
             </div>
             <a href="./article.html"
-              class="btn btn-md block bg-secondary-200 text-white justify-self-end hover:bg-primary-200 transition duration-100 ease-in">
+              class="btn btn-md block btn-primary text-white justify-self-end hover:bg-primary-200 transition duration-100 ease-in">
               <button>Baca selengkapnya</button>
             </a>
           </div>
@@ -164,7 +144,7 @@
           </div>
           <div class="article-details">
             <a href="./article.html" class="justify-self-start">
-              <h2 class="uppercase font-extrabold text-secondary-200 hover:text-primary-200 text-xl sm:h-16">Kumpul KJR:
+              <h2 class="uppercase font-extrabold text-secondary-200 text-xl sm:h-16">Kumpul KJR:
                 Perkenalan Anggota
                 baru
               </h2>
@@ -173,7 +153,7 @@
               <p>KJR Cianjur selesai berolahraga. Berkumpul untuk berkenalan dengan anggota baru.</p>
             </div>
             <a href="./article.html"
-              class="btn btn-md block bg-secondary-200 text-white justify-self-end hover:bg-primary-200 transition duration-100 ease-in">
+              class="btn btn-md block btn-primary text-white justify-self-end hover:bg-primary-200 transition duration-100 ease-in">
               <button>Baca selengkapnya</button>
             </a>
           </div>
@@ -195,7 +175,7 @@
           </div>
           <div class="article-details">
             <a href="./article.html" class="justify-self-start">
-              <h2 class="uppercase font-extrabold text-secondary-200 hover:text-primary-200 text-xl sm:h-16">Senam
+              <h2 class="uppercase font-extrabold text-secondary-200 text-xl sm:h-16">Senam
                 kreasi: Sidekick by
                 Dawin</h2>
             </a>
@@ -204,7 +184,7 @@
                 ini.</p>
             </div>
             <a href="./article.html"
-              class="btn btn-md block bg-secondary-200 text-white justify-self-end hover:bg-primary-200 transition duration-100 ease-in">
+              class="btn btn-md block btn-primary text-white justify-self-end hover:bg-primary-200 transition duration-100 ease-in">
               <button>Baca selengkapnya</button>
             </a>
           </div>
@@ -226,7 +206,7 @@
           </div>
           <div class="article-details">
             <a href="./article.html" class="justify-self-start">
-              <h2 class="uppercase font-extrabold text-secondary-200 hover:text-primary-200 text-xl sm:h-16">Acara
+              <h2 class="uppercase font-extrabold text-secondary-200 text-xl sm:h-16">Acara
                 pelantikan KJR
                 dan
                 KJS di Bandung</h2>
@@ -237,7 +217,7 @@
                 ex.</p>
             </div>
             <a href="./article.html"
-              class="btn btn-md block bg-secondary-200 text-white justify-self-end hover:bg-primary-200 transition duration-100 ease-in">
+              class="btn btn-md block btn-primary text-white justify-self-end hover:bg-primary-200 transition duration-100 ease-in">
               <button>Baca selengkapnya</button>
             </a>
           </div>
@@ -259,7 +239,7 @@
           </div>
           <div class="article-details">
             <a href="./article.html" class="justify-self-start">
-              <h2 class="uppercase font-extrabold text-secondary-200 hover:text-primary-200 text-xl sm:h-16">Judul nomor
+              <h2 class="uppercase font-extrabold text-secondary-200 text-xl sm:h-16">Judul nomor
                 sekian dan terima
                 kasih
               </h2>
@@ -269,7 +249,7 @@
                 maxime?</p>
             </div>
             <a href="./article.html"
-              class="btn btn-md block bg-secondary-200 text-white justify-self-end hover:bg-primary-200 transition duration-100 ease-in">
+              class="btn btn-md block btn-primary text-white justify-self-end hover:bg-primary-200 transition duration-100 ease-in">
               <button>Baca selengkapnya</button>
             </a>
           </div>
@@ -291,7 +271,7 @@
           </div>
           <div class="article-details">
             <a href="./article.html" class="justify-self-start">
-              <h2 class="uppercase font-extrabold text-secondary-200 hover:text-primary-200 text-xl sm:h-16">KJR Cianjur
+              <h2 class="uppercase font-extrabold text-secondary-200 text-xl sm:h-16">KJR Cianjur
                 in Action</h2>
             </a>
             <div class="text-gray-500 font-light my-4 h-20 overflow-y-auto">
@@ -299,7 +279,7 @@
               <p>We Are The Future!!!</p>
             </div>
             <a href="./article.html"
-              class="btn btn-md block bg-secondary-200 text-white justify-self-end hover:bg-primary-200 transition duration-100 ease-in">
+              class="btn btn-md block btn-primary text-white justify-self-end hover:bg-primary-200 transition duration-100 ease-in">
               <button>Baca selengkapnya</button>
             </a>
           </div>
@@ -307,7 +287,7 @@
       </div>
     </section>
   </main>
-  <footer class="bg-primary-200 mt-3 text-white">
+  <footer class="bg-primary-200 mt-10 text-white">
     <div class="max-w-6xl mx-auto grid sm:grid-cols-3 items-center py-4 px-3">
       <div class="flex items-center col-span-2 sm:justify-self-start">
         <div class="w-32">
@@ -349,6 +329,38 @@
       </div>
     </div>
   </footer>
+
+  <div class="p-5 flex items-center justify-center" id="modal">
+    <span class="closeModal text-4xl">&times;</span>
+    <div id="modalLogin"
+      class="bg-white max-w-2xl mx-auto p-5 w-full flex flex-col items-center justify-center relative">
+      <div class="modal-header w-full mb-5 -mt-3 flex justify-between items-center">
+        <h2 class="font-bold text-xl">Login</h2>
+      </div>
+      <div class="max-w-xl mx-auto w-full">
+        <form action="./index2.html">
+          <div>
+            <label class="block text-gray-600">Alamat Email</label>
+            <input autofocus class="focus:outline-none focus:border-primary-200 border-b-2 w-full p-2 mt-1 my-2"
+              type="text" placeholder="eruDev@example.com">
+          </div>
+          <div>
+            <label class="block text-gray-600">Kata Sandi</label>
+            <input class="focus:outline-none focus:border-primary-200 border-b-2 w-full p-2 mt-1 my-2" type="password"
+              placeholder="********">
+          </div>
+          <div class="text-center">
+            <button
+              class="border p-2 mt-1 my-2 rounded-md bg-primary-100 hover:bg-primary-200 text-white">Masuk</button>
+          </div>
+          <a href="#" class="mb-5 inline-block">
+            <p>Lupa kata sandi?</p>
+          </a>
+        </form>
+      </div>
+    </div>
+
+  </div>
 
   <script src="./script/script.js"></script>
 </body>

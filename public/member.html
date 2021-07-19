@@ -18,15 +18,15 @@
 <body class="font-body bg-gray-200">
   <!-- Header -->
   <header class="bg-primary-200 shadow-lg text-white text-sm lg:text-base top-0 fixed w-full z-10">
-    <nav class="container max-w-6xl mx-auto flex h-auto items-center px-3 justify-between">
+    <nav class="px-3 md:px-0 container max-w-6xl mx-auto flex items-center justify-between">
       <button class="md:hidden order-2" id="burger">
         <svg class="w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16m-7 6h7"></path>
         </svg>
       </button>
-      <a href="./index.html" class="flex items-center py-4">
+      <a href="./index.html" class="flex items-center">
         <div class="w-8">
-          <img class="w-full object-cover object-center" src="./images/logo-kjr-circle.png" alt="Logo KJR">
+          <img class="logo w-full object-cover object-center" src="./images/logo-kjr-circle.png" alt="Logo KJR">
         </div>
         <h1 class="ml-2">KJR Cianjur</h1>
       </a>
@@ -40,27 +40,34 @@
               <img class="w-full object-cover object-center" src="./images/logo-kjr-circle.png" alt="Logo KJR">
             </div>
           </a>
-          <div class="cursor-pointer" id="close">
+          <div class="cursor-pointer md:hidden" id="close">
             <svg class="w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </div>
         </div>
-        <ul
-          class="text-center md:text-left border-b border-primary-200 md:flex md:border-white md:border-r md:border-b-0">
-          <li class="my-5 px-4 md:my-0 cursor-pointer hover:underline">
-            <a class="block" href="./index.html">Beranda</a>
+        <ul class="nav-menu text-center border-b border-primary-200 md:flex">
+          <li class="nav-item">
+            <a class="block nav-link" href="./index.html">Beranda</a>
           </li>
-          <li class="my-5 px-4 md:my-0 cursor-pointer hover:underline">
-            <a class="block" href="./about.html">Tentang Kami</a>
+          <li class="nav-item">
+            <a class="block nav-link" href="./about.html">Tentang KJR</a>
           </li>
-          <li class="my-5 px-4 md:my-0 cursor-pointer font-bold hover:underline">
-            <a class="block" href="./member.html">Anggota</a>
+          <li class="nav-item active">
+            <a class="block nav-link" href="./member.html">Anggota</a>
           </li>
-          <li class="my-5 px-4 cursor-pointer md:my-0 hover:underline">
-            <a class="block" href="./contact.html">Hubungi Kami</a>
+          <li class="nav-item">
+            <a class="block nav-link" href="./contact.html">Kontak</a>
           </li>
         </ul>
+        <!-- <ul class="nav-subMenu text-center my-2 md:my-0 md:flex md:items-center">
+            <li class="nav-item nav-login">
+              <a class="block nav-link" href="#" id="loginModal">Masuk</a>
+            </li>
+            <li class="nav-item nav-register">
+              <a class="block nav-link" href="#" id="registerModal">Daftar</a>
+            </li>
+          </ul> -->
         <div class="p-3 lg:p-0 md:ml-5 dropdown relative">
           <button class="flex items-center dropbtn">
             <div class="w-7 h-7 rounded-full overflow-hidden">
@@ -72,12 +79,14 @@
               </svg>
             </div>
           </button>
-          <div id="dropdownMenu" class="dropdown-content md:absolute md:bg-primary-200 right-0 rounded">
-            <a class="md:py-1 md:pl-2 md:pr-10 block my-2 md:my-0 lg:hover:bg-secondary-200 transition duration-100 ease-linear"
-              href="./members/index.html">Profil</a>
-            <a class="md:py-1 md:pl-2 md:pr-10 block my-2 md:my-0 lg:hover:bg-secondary-200 transition duration-100 ease-linear"
-              href="./login.html">Logout</a>
-          </div>
+          <ul id="dropdownMenu" class="dropdown-content md:absolute md:bg-primary-200 right-0">
+            <li class="nav-item">
+              <a class="nav-link block" href="./members/index.html">Profil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link block" href="./login.html">Logout</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -425,7 +434,7 @@
       </div>
     </div>
   </main>
-  <footer class="bg-primary-200 mt-3 text-white">
+  <footer class="bg-primary-200 mt-10 text-white">
     <div class="max-w-6xl mx-auto grid sm:grid-cols-3 items-center py-4 px-3">
       <div class="flex items-center col-span-2 sm:justify-self-start">
         <div class="w-32">

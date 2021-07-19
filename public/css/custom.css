@@ -1,3 +1,11 @@
+/* Utilities */
+.btn-primary {
+  background: #003363;
+}
+.btn-primary:hover {
+  background: #00509b;
+}
+
 .date-published .line {
   content: '';
   position: absolute;
@@ -7,6 +15,42 @@
   left: -35px;
   background: #d4d4d8;
   transform: rotate(90deg);
+}
+
+header {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+.nav-item.nav-login {
+  background: #00509b;
+  border-radius: 4px;
+}
+.nav-item.nav-login:hover a {
+  background: none;
+}
+.dropdown .nav-item {
+  justify-content: start;
+}
+.nav-item a {
+  width: 100%;
+  padding: 8px;
+}
+.nav-item:hover a {
+  border-radius: 4px;
+  background: #b91c1c;
+  transition: 300ms;
+}
+.nav-item.active a {
+  border-radius: 4px;
+  background: #b91c1c;
+  transition: 300ms;
 }
 
 .instagram,
@@ -38,6 +82,7 @@
 #menu.show {
   top: 0;
   transition: all 200ms ease;
+  z-index: 40;
 }
 
 #dropdownMenu {
@@ -47,6 +92,9 @@
 #dropdownMenu.show {
   display: block;
   animation: fadeIn 0.3s;
+}
+.dropdown {
+  justify-content: start;
 }
 
 .overlay {
@@ -89,9 +137,62 @@
   padding: 0;
 }
 
+#modal {
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 50;
+  animation: fadeIn 300ms;
+}
+#modal .closeModal {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  color: #fff;
+}
+#modal.show {
+  display: flex;
+}
+#modal #modalLogin,
+#modal #modalRegister {
+  display: none;
+}
+#modal.show #modalLogin,
+#modal.show #modalRegister {
+  display: block;
+}
+
 @media (min-width: 768px) {
+  .nav-item:nth-child(4) {
+    margin-right: 10px;
+  }
+  .nav-item a {
+    width: 100%;
+  }
+  .nav-menu {
+    border-right: 1px solid #fff;
+  }
+  .nav-subMenu {
+    margin-left: 5px;
+  }
   #menu {
     top: 0;
+  }
+  #dropdownMenu > a:hover {
+    background: #801111;
+    transition: 300ms;
+  }
+  .dropdown-content {
+    width: 150px;
   }
   .overlay {
     display: none;

@@ -22,15 +22,15 @@
 <body class="font-body bg-gray-200">
   <!-- Header -->
   <header class="bg-primary-200 shadow-lg text-white text-sm lg:text-base top-0 fixed w-full z-10">
-    <nav class="container max-w-6xl mx-auto flex h-auto items-center px-3 justify-between">
+    <nav class="px-3 md:px-0 container max-w-6xl mx-auto flex items-center justify-between">
       <button class="md:hidden order-2" id="burger">
         <svg class="w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16m-7 6h7"></path>
         </svg>
       </button>
-      <a href="../index.html" class="flex items-center py-4">
+      <a href="../index.html" class="flex items-center">
         <div class="w-8">
-          <img class="w-full object-cover object-center" src="../images/logo-kjr-circle.png" alt="Logo KJR">
+          <img class="logo w-full object-cover object-center" src="../images/logo-kjr-circle.png" alt="Logo KJR">
         </div>
         <h1 class="ml-2">KJR Cianjur</h1>
       </a>
@@ -44,27 +44,34 @@
               <img class="w-full object-cover object-center" src="../images/logo-kjr-circle.png" alt="Logo KJR">
             </div>
           </a>
-          <div class="cursor-pointer" id="close">
+          <div class="cursor-pointer md:hidden" id="close">
             <svg class="w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </div>
         </div>
-        <ul
-          class="text-center md:text-left border-b border-primary-200 md:flex md:border-white md:border-r md:border-b-0">
-          <li class="my-5 px-4 md:my-0 cursor-pointer hover:underline">
-            <a class="block" href="../index.html">Beranda</a>
+        <ul class="nav-menu text-center border-b border-primary-200 md:flex">
+          <li class="nav-item">
+            <a class="block nav-link" href="../index.html">Beranda</a>
           </li>
-          <li class="my-5 px-4 md:my-0 cursor-pointer hover:underline">
-            <a class="block" href="../about.html">Tentang Kami</a>
+          <li class="nav-item">
+            <a class="block nav-link" href="../about.html">Tentang KJR</a>
           </li>
-          <li class="my-5 px-4 md:my-0 cursor-pointer hover:underline">
-            <a class="block" href="../member.html">Anggota</a>
+          <li class="nav-item">
+            <a class="block nav-link" href="../member.html">Anggota</a>
           </li>
-          <li class="my-5 px-4 cursor-pointer md:my-0 hover:underline">
-            <a class="block" href="../contact.html">Hubungi Kami</a>
+          <li class="nav-item">
+            <a class="block nav-link" href="../contact.html">Kontak</a>
           </li>
         </ul>
+        <!-- <ul class="nav-subMenu text-center my-2 md:my-0 md:flex md:items-center">
+                  <li class="nav-item nav-login">
+                    <a class="block nav-link" href="#" id="loginModal">Masuk</a>
+                  </li>
+                  <li class="nav-item nav-register">
+                    <a class="block nav-link" href="#" id="registerModal">Daftar</a>
+                  </li>
+                </ul> -->
         <div class="p-3 lg:p-0 md:ml-5 dropdown relative">
           <button class="flex items-center dropbtn">
             <div class="w-7 h-7 rounded-full overflow-hidden">
@@ -76,12 +83,14 @@
               </svg>
             </div>
           </button>
-          <div id="dropdownMenu" class="dropdown-content md:absolute md:bg-primary-200 right-0 rounded">
-            <a class="md:py-1 md:pl-2 md:pr-10 block my-2 md:my-0 lg:hover:bg-secondary-200 transition duration-100 ease-linear"
-              href="../members/index.html">Profil</a>
-            <a class="md:py-1 md:pl-2 md:pr-10 block my-2 md:my-0 lg:hover:bg-secondary-200 transition duration-100 ease-linear"
-              href="../login.html">Logout</a>
-          </div>
+          <ul id="dropdownMenu" class="dropdown-content md:absolute md:bg-primary-200 right-0">
+            <li class="nav-item">
+              <a class="nav-link block" href="../members/index.html">Profil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link block" href="../login.html">Logout</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -89,47 +98,47 @@
 
   <!-- Main Content -->
   <main class="container max-w-6xl mx-auto p-3 mt-16 text-secondary-200">
-    <h1 class="font-bold text-xl my-5">Edit Artikel</h1>
-    <div class="image-placeholder w-full h-full md:h-80 bg-white relative overflow-hidden">
-      <img src="../images/foto-4.jpg" alt="Cover" class="w-full object-cover object-center md:absolute md:-mt-40">
-      <div class="bg-overlay bg-black bg-opacity-50 absolute w-full h-full"></div>
-      <div class="addPhoto absolute bottom-2 left-2">
-        <a href="#" class="inline-block bg-primary-200 text-white p-2 hover:bg-primary-100">Ubah Foto Cover</a>
+    <h1 class="font-bold text-xl mb-5">Edit Artikel</h1>
+    <form>
+      <div class="image-placeholder w-full h-full md:h-96 bg-white relative overflow-hidden rounded">
+        <img src="../images/foto-4.jpg" alt="Cover" class="w-full object-cover object-center md:absolute md:-mt-40">
+        <!-- <div class="bg-overlay bg-black bg-opacity-50 absolute top-0 left-0 w-full h-full"></div> -->
+        <div class="addPhoto absolute bottom-2 left-2">
+          <a href="#" class="inline-block bg-primary-200 text-white p-2 hover:bg-primary-100 rounded">Update Foto
+            Cover</a>
+        </div>
       </div>
-    </div>
-    <div class="max-w-3xl mx-auto bg-white mt-5 p-5">
-      <form>
-        <div>
-          <label class="block text-secondary-200 font-bold" for="title">Judul Artikel</label>
-          <input
-            class="focus:outline-none focus:border-primary-100 border-2 rounded-md py-1 px-2 mt-1 my-2 text-secondary-200 w-full"
-            type="text" value="Acara Pelantikan KJS Dan KJR Di Bandung" id="title">
+
+      <div class="max-w-3xl mx-auto">
+        <div class="rounded-md bg-white mt-5 p-10">
+          <div>
+            <label class="block text-secondary-200 font-bold" for="title">Judul Artikel</label>
+            <input
+              class="focus:outline-none focus:border-primary-100 border-2 rounded-md py-1 px-2 mt-1 my-2 text-secondary-200 w-full"
+              type="text" value="Acara pelantikan kjs dan kjs di bandung" id="title">
+          </div>
+          <div>
+            <label class="block text-secondary-200 font-bold">Slug <span class="text-sm font-light">(Otomatis
+                terisi)</span></label>
+            <input
+              class="focus:outline-none focus:border-primary-100 border-2 rounded-md py-1 px-2 mt-1 my-2 text-secondary-200 w-full font-light"
+              type="text" value="acara-pelantikan-kjs-dan-kjs-di-bandung" disabled>
+          </div>
+          <div>
+            <label for="textArticle" class="block font-bold mb-1">Konten Artikel</label>
+            <textarea id="textArticle" name="message" rows="10"
+              class="resize-none focus:outline-none focus:border-primary-100 border-2 rounded-md py-1 px-2 mt-1 my-2 text-secondary-200 w-full"
+              placeholder="Kita adalah masa depan...">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam odit beatae corrupti quia sint fugiat. Ratione, iste asperiores. Dignissimos eum praesentium, beatae minima excepturi voluptatem consequatur, ducimus quidem saepe quaerat illum delectus eos earum harum et nesciunt cumque quis nobis ipsam obcaecati sint ullam id? Facere odio ea, itaque amet vero veniam cum deserunt. Culpa nam tenetur, a perferendis, rerum voluptates ex nemo animi ratione voluptatem hic vel nostrum illo.</textarea>
+          </div>
+          <button class="btn bg-primary-200 text-white hover:bg-primary-100 w-full lg:w-auto">Update
+            Artikel</button>
         </div>
-        <div>
-          <label class="block text-secondary-200 font-bold" for="email">Slug <span class="text-sm font-light">(Otomatis
-              terisi)</span></label>
-          <input
-            class="focus:outline-none focus:border-primary-100 border-2 rounded-md py-1 px-2 mt-1 my-2 text-secondary-200 w-full font-light"
-            type="text" value="acara-pelantikan-kjs-dan-kjr-di-bandung" id="text" disabled>
-        </div>
-        <div>
-          <label for="textArticle" class="block font-bold mb-1">Konten Artikel</label>
-          <textarea id="textArticle" name="message" rows="5"
-            class="resize-none focus:outline-none focus:border-primary-100 border-2 rounded-md py-1 px-2 mt-1 my-2 text-secondary-200 w-full"
-            placeholder="Kita adalah masa depan...">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eligendi repudiandae soluta nemo voluptate eveniet
-            amet? Quod alias adipisci inventore facere veritatis repudiandae beatae nemo error iste eos quas maxime soluta accusamus
-            optio qui, ipsa fuga eum vero. Iure, unde natus. Blanditiis harum delectus facere a odit natus eos praesentium eum
-            tempore nobis voluptatum quam eius minus id maxime exercitationem possimus labore, officia non! Molestiae fugiat
-            nesciunt veniam, assumenda necessitatibus itaque magnam saepe sapiente pariatur, nulla, obcaecati a totam laboriosam est
-            quibusdam quod voluptatem earum! Debitis facilis omnis tempora expedita illum. Rerum inventore consectetur, facere
-            possimus doloribus aspernatur nihil deleniti.</textarea>
-        </div>
-        <button class="btn bg-primary-200 text-white hover:bg-primary-100 mt-5 w-full lg:w-auto">Update Artikel</button>
-      </form>
-    </div>
+      </div>
+    </form>
+
   </main>
 
-  <footer class="bg-primary-200 text-white">
+  <footer class="bg-primary-200 mt-10 text-white">
     <div class="max-w-6xl mx-auto grid sm:grid-cols-3 items-center py-4 px-3">
       <div class="flex items-center col-span-2 sm:justify-self-start">
         <div class="w-32">

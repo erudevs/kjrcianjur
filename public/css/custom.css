@@ -36,7 +36,7 @@ header {
   margin: 5px;
 }
 .nav-item.nav-login {
-  background: #00509b;
+  border: 1px solid #b91c1c;
   border-radius: 4px;
 }
 .nav-item.nav-login:hover a {
@@ -165,17 +165,33 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.modal .modal-body {
+  max-height: 500px;
+  overflow-y: auto;
+}
+.custom-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: #e4e4e4;
+  border-radius: 5px;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #00509b;
+  border-radius: 5px;
+}
 .modal .modal-body form {
   display: none;
   animation: fadeIn 300ms;
 }
+.modal .modal-btn:hover {
+  background: #00509b;
+  color: #fff;
+  transition: 300ms;
+}
 .modal .modal-btn.active {
   background: #003363;
   color: #fff;
-}
-.modal .modal-btn:hover {
-  background: #00509b;
-  transition: 300ms;
 }
 .modal .closeModal {
   cursor: pointer;

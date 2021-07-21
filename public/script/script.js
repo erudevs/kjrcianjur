@@ -11,14 +11,17 @@ const navLink = document.querySelectorAll('.nav-link');
 const modal = document.querySelector('.modal');
 const btnModal = document.getElementById('btnModal');
 const registerModal = document.getElementById('registerModal');
+const body = document.body;
 
 if (modal) {
   const closeModal = document.querySelector('.closeModal');
   btnModal.onclick = function () {
     modal.classList.add('show');
+    body.style.overflowY = 'hidden';
   };
   closeModal.onclick = function () {
     modal.classList.remove('show');
+    body.style.overflowY = 'scroll';
   };
 
   window.onclick = function (e) {
@@ -99,4 +102,6 @@ function openForm(e, formName) {
   document.getElementById(formName).style.display = 'block';
   e.currentTarget.className += ' active';
 }
-document.getElementById('defaultOpen').click();
+if (document.getElementById('defaultOpen')) {
+  document.getElementById('defaultOpen').click();
+}

@@ -114,7 +114,7 @@
                 Olahraga bagi
                 Jantung</h2>
             </a>
-            <div class="text-gray-500 font-light my-4 h-20 overflow-y-auto">
+            <div class="text-gray-500 font-light my-4 h-20 overflow-y-auto custom-scroll">
               <p>Selain memperkuat otot-otot lain di tubuh, olahraga juga membantu otot jantung menjadi lebih efisien
                 dan memperlancar
                 pemompaan darah ke seluruh tubuh. Artinya, olahraga bermanfaat untuk mendorong jantung agar berdetak
@@ -149,7 +149,7 @@
                 baru
               </h2>
             </a>
-            <div class="text-gray-500 font-light my-4 h-20 overflow-y-auto">
+            <div class="text-gray-500 font-light my-4 h-20 overflow-y-auto custom-scroll">
               <p>KJR Cianjur selesai berolahraga. Berkumpul untuk berkenalan dengan anggota baru.</p>
             </div>
             <a href="./article.html"
@@ -179,7 +179,7 @@
                 kreasi: Sidekick by
                 Dawin</h2>
             </a>
-            <div class="text-gray-500 font-light my-4 h-20 overflow-y-auto">
+            <div class="text-gray-500 font-light my-4 h-20 overflow-y-auto custom-scroll">
               <p>Dipimpin teh Nur, musik dengan irama R&B dan pop ini menjadi pilihan untuk senam kreasi KJR pada kali
                 ini.</p>
             </div>
@@ -211,7 +211,7 @@
                 dan
                 KJS di Bandung</h2>
             </a>
-            <div class="text-gray-500 font-light my-4 h-20 overflow-y-auto">
+            <div class="text-gray-500 font-light my-4 h-20 overflow-y-auto custom-scroll">
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum recusandae maiores quae atque
                 perferendis exercitationem pariatur voluptate aperiam? Tempore iure iste voluptatibus deserunt quibusdam
                 ex.</p>
@@ -244,7 +244,7 @@
                 kasih
               </h2>
             </a>
-            <div class="text-gray-500 font-light my-4 h-20 overflow-y-auto">
+            <div class="text-gray-500 font-light my-4 h-20 overflow-y-auto custom-scroll">
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis iure non nesciunt illo, ipsum
                 maxime?</p>
             </div>
@@ -274,7 +274,7 @@
               <h2 class="uppercase font-extrabold text-secondary-200 text-xl sm:h-16">KJR Cianjur
                 in Action</h2>
             </a>
-            <div class="text-gray-500 font-light my-4 h-20 overflow-y-auto">
+            <div class="text-gray-500 font-light my-4 h-20 overflow-y-auto custom-scroll">
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, animi.</p>
               <p>We Are The Future!!!</p>
             </div>
@@ -332,18 +332,19 @@
 
   <div class="modal p-5">
     <div class="modal-content bg-white max-w-2xl justify-self-center">
-      <div class="modal-header flex items-center justify-between bg-gray-500">
-        <div class="modal-btn__container flex">
+      <div class="modal-header flex items-center justify-between bg-gray-300">
+        <div class="modal-btn__container flex text-secondary-200">
           <button class="modal-btn p-3" onclick="openForm(event, 'login')" id="defaultOpen">Masuk</button>
           <button class="modal-btn p-3" onclick="openForm(event, 'register')">Daftar</button>
         </div>
         <div class="modal-close closeModal p-3">
-          <svg class="w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg class="w-6 text-secondary-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </div>
       </div>
-      <div class="modal-body p-5">
+      <div class="modal-body p-5 custom-scroll">
         <div class="w-full">
           <form action="./index2.html" class="form form-login" id="login">
             <div>
@@ -358,13 +359,13 @@
             </div>
             <div class="text-center">
               <button
-                class="border p-2 mt-1 my-2 rounded-md bg-primary-100 hover:bg-primary-200 text-white">Masuk</button>
+                class="border p-2 mt-1 my-2 rounded-md bg-primary-100 hover:bg-primary-200 text-white w-full">Masuk</button>
             </div>
             <a href="#" class="mb-5 inline-block">
               <p>Lupa kata sandi?</p>
             </a>
           </form>
-          <form action="./index2.html" class="form form-register" id="register">
+          <form action="./index2.html" class="form form-register overflow-y-auto" id="register">
             <div>
               <label class="block text-gray-600">Nama Lengkap</label>
               <input autofocus class="focus:outline-none focus:border-primary-200 border-b-2 w-full p-2 mt-1 my-2"

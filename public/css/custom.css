@@ -1,4 +1,15 @@
 /* Utilities */
+.custom-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: #e4e4e4;
+  border-radius: 5px;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #00509b;
+  border-radius: 5px;
+}
 .btn-primary {
   background: #003363;
 }
@@ -58,7 +69,6 @@ header {
   border-radius: 4px;
   background: #b91c1c;
   transition: 300ms;
-  border: 1px solid #fff;
 }
 
 .instagram,
@@ -169,17 +179,6 @@ header {
   max-height: 500px;
   overflow-y: auto;
 }
-.custom-scroll::-webkit-scrollbar {
-  width: 5px;
-}
-.custom-scroll::-webkit-scrollbar-track {
-  background: #e4e4e4;
-  border-radius: 5px;
-}
-.custom-scroll::-webkit-scrollbar-thumb {
-  background: #00509b;
-  border-radius: 5px;
-}
 .modal .modal-body form {
   display: none;
   animation: fadeIn 300ms;
@@ -210,9 +209,7 @@ header {
     width: 100%;
   }
   .nav-menu {
-    border-right: 1px solid #fff;
-    border-top: none;
-    border-bottom: none;
+    border: none;
   }
   .nav-subMenu {
     margin-left: 5px;
